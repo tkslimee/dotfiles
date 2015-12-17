@@ -15,6 +15,7 @@ set backspace=indent,eol,start
 set nowritebackup
 set nobackup
 set noswapfile
+set listchars=tab:»-,extends:»,precedes:«,nbsp:%,eol:↲
 
 set number
 set list
@@ -28,6 +29,9 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set formatoptions-=ro
+
+"クリップボードにコピー
+set clipboard=unnamed,autoselect
 
 noremap <C-l> gt
 noremap <C-h> gT
@@ -157,5 +161,5 @@ inoremap <expr><C-y>  neocomplcache#close_popup()
 
 ""color
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
