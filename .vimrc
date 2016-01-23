@@ -113,6 +113,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-obsession'
 ""You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'plasticboy/vim-markdown'

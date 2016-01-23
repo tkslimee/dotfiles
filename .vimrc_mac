@@ -33,9 +33,6 @@ set formatoptions-=ro
 "クリップボードにコピー
 set clipboard=unnamed,autoselect
 
-"noremap <C-l> gt
-"noremap <C-h> gT
-
 "ウィンドウ移動
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
@@ -123,6 +120,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-obsession'
 ""You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'plasticboy/vim-markdown'
@@ -169,3 +167,6 @@ inoremap <expr><C-y>  neocomplcache#close_popup()
 syntax enable
 set background=light
 colorscheme solarized
+
+""unファイルを一箇所にまとめる
+set undodir=~/.vim_undo
