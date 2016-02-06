@@ -160,9 +160,9 @@ inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 
 ""color
-set t_Co=256
 syntax enable
-colorscheme hybrid
+set background=light
+colorscheme solarized
 
 ""Font size
 set guifont=MS_Gothic:h9
