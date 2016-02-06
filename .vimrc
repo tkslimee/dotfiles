@@ -29,8 +29,14 @@ set expandtab
 set autoindent
 set formatoptions-=ro
 
-noremap <C-l> gt
-noremap <C-h> gT
+"クリップボードにコピー
+set clipboard=unnamed,autoselect
+
+"ウィンドウ移動
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
 
 nnoremap j gj
 nnoremap k gk
@@ -104,6 +110,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
