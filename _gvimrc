@@ -159,13 +159,14 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 
+""unファイルを一箇所にまとめる
+set undodir=~/.vim_undo
+
+"""""""""""""""""""""""""gvim用の設定
 ""color
 syntax enable
 set background=light
 colorscheme solarized
-
-""unファイルを一箇所にまとめる
-set undodir=~/.vim_undo
 
 ""Font size
 set guifont=MS_Gothic:h9
