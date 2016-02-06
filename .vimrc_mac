@@ -33,9 +33,6 @@ set formatoptions-=ro
 "クリップボードにコピー
 set clipboard=unnamed,autoselect
 
-"noremap <C-l> gt
-"noremap <C-h> gT
-
 "ウィンドウ移動
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
