@@ -167,3 +167,6 @@ inoremap <expr><C-y>  neocomplcache#close_popup()
 set t_Co=256
 syntax enable
 colorscheme hybrid
+
+""unファイルを一箇所にまとめる
+set undodir=~/.vim_undo
