@@ -173,10 +173,6 @@ colorscheme solarized
 set guifont=MS_Gothic:h9
 set guifontwide=MS_Gothic:h9
 
-""タブエディタ化(ドラッグアンドドロップ補助)
-""autocmd VimEnter * tab all
-""autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"'
-
 ""vimfiler用設定
 set modifiable
 set write
