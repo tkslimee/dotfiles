@@ -166,7 +166,7 @@ set undodir=~/.vim_undo
 """""""""""""""""""""""""gvim用の設定
 ""color
 syntax enable
-colorscheme hybrid
+colorscheme hybrid_material
 
 ""vimfiler用設定
 set modifiable
