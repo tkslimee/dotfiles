@@ -165,9 +165,9 @@ set undodir=~/.vim_undo
 
 """""""""""""""""""""""""gvim用の設定
 ""color
+set t_Co=256
 syntax enable
-set background=light
-colorscheme solarized
+colorscheme hybrid_material
 
 ""Font size
 set guifont=MS_Gothic:h9
