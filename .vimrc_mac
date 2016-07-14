@@ -186,6 +186,8 @@ let g:vimfiler_safe_mode_by_default = 0
 nnoremap <silent> ,fe :<C-u>VimFilerBufferDir -quit<CR>
 "現在開いているバッファをIDE風に開く
 nnoremap <silent> ,fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
+"自動でカレントディレクトリを変更
+let g:vimfiler_enable_auto_cd = 1
 
 ""unite用設定
 " 入力モードで開始する
