@@ -121,6 +121,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-obsession'
+NeoBundle 'thinca/vim-template'
 ""You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'plasticboy/vim-markdown'
@@ -129,6 +130,13 @@ call neobundle#end()
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 filetype plugin indent on " required!
 filetype indent on
+
+"" vim-template
+""<+CURSOR+> にカーソルを移動する
+autocmd User plugin-template-loaded
+\    if search('<+CURSOR+>')
+\  |   execute 'normal! "_da>'
+\  | endif
 
 "" neocomplcache
 " Disable AutoComplPop.
