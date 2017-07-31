@@ -125,6 +125,10 @@ NeoBundle 'vim-scripts/YankRing.vim'
 ""You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+"mdファイルをmarkdownファイルタイプに変更する
+autocmd BufRead,BufNewFile *.{text,txt,md} set filetype=markdown
 call neobundle#end()
 
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
