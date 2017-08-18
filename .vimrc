@@ -134,6 +134,12 @@ call neobundle#end()
 filetype plugin indent on " required!
 filetype indent on
 
+"" markdown設定
+" .mdのファイルもfiletypeがmarkdownとなるようにする
+au BufRead,BufNewFile *.md set filetype=markdown
+" markdownの折りたたみなし
+let g:vim_markdown_folding_disabled=1
+
 "" vim-template
 ""<+CURSOR+> にカーソルを移動する
 autocmd User plugin-template-loaded
@@ -222,7 +228,8 @@ autocmd FileType vimfiler call unite#custom_default_action('directory', 'lcd')
 ""color
 set t_Co=256
 syntax enable
-colorscheme hybrid_material
+set background=light
+colorscheme solarized
 
 ""unファイルを一箇所にまとめる
 set undodir=~/.vim_undo
