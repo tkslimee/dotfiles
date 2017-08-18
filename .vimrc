@@ -15,6 +15,7 @@ set backspace=indent,eol,start
 set nowritebackup
 set nobackup
 set noswapfile
+set listchars=tab:»-,extends:»,precedes:«,nbsp:%,eol:↲
 
 set number
 set list
