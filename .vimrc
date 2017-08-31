@@ -212,6 +212,10 @@ nnoremap <silent> ,fe :<C-u>VimFilerBufferDir -quit<CR>
 nnoremap <silent> ,fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
 "自動でカレントディレクトリを変更
 let g:vimfiler_enable_auto_cd = 1
+"eで新規タブで開く(winのみ)
+if (has("win64"))
+let g:vimfiler_edit_action = 'tabopen'
+endif
 
 ""unite用設定
 " 入力モードで開始する
