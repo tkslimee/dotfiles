@@ -33,6 +33,9 @@ set formatoptions-=ro
 "クリップボードにコピー
 set clipboard=unnamed,autoselect
 
+"文字コード変更"
+set encoding=utf-8
+
 "ウィンドウ移動
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
@@ -120,7 +123,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'thinca/vim-template'
 NeoBundle 'tpope/vim-surround'
