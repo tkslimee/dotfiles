@@ -15,7 +15,10 @@ set backspace=indent,eol,start
 set nowritebackup
 set nobackup
 set noswapfile
+
+if (has("win32unix") || has("mac"))
 set listchars=tab:»-,extends:»,precedes:«,nbsp:%,eol:↲
+endif
 
 set number
 set list
@@ -36,11 +39,16 @@ set clipboard=unnamed,autoselect
 "文字コード変更"
 set encoding=utf-8
 
+if (has("win32unix") || has("mac"))
 "ウィンドウ移動
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
+else
+noremap <C-l> gt
+noremap <C-h> gT
+endif
 
 nnoremap j gj
 nnoremap k gk
@@ -130,7 +138,13 @@ NeoBundle 'vim-scripts/YankRing.vim'
 ""You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'plasticboy/vim-markdown'
+if (has("win64"))
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+endif
 call neobundle#end()
+
+NeoBundleCheck
 
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 filetype plugin indent on " required!
