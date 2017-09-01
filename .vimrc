@@ -241,6 +241,12 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,gc :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
+" grep検索結果の再呼出
+nnoremap <silent> ,gr  :<C-u>UniteResume search-buffer<CR>
 
 " uniteからブックマークで移動するときにvimfilerで開くようにする
 autocmd FileType vimfiler call unite#custom_default_action('directory', 'lcd')
@@ -248,7 +254,7 @@ autocmd FileType vimfiler call unite#custom_default_action('directory', 'lcd')
 ""color
 set t_Co=256
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 ""unファイルを一箇所にまとめる
