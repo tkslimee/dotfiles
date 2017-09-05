@@ -125,6 +125,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
@@ -219,7 +220,7 @@ endif
 
 ""unite用設定
 " 入力モードで開始する
-" let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert=1
 " バッファ一覧
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 " ファイル一覧
