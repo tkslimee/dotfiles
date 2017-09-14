@@ -16,7 +16,7 @@ set nowritebackup
 set nobackup
 set noswapfile
 
-if (has("win32unix") || has("mac"))
+if (has("win32unix") || has("mac") || has("unix"))
 set listchars=tab:»-,extends:»,precedes:«,nbsp:%,eol:↲
 endif
 
