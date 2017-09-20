@@ -39,7 +39,7 @@ set clipboard=unnamed,autoselect
 "文字コード変更"
 set encoding=utf-8
 
-if (has("win32unix") || has("mac"))
+if (has("win32unix") || has("mac") || has("unix"))
 "ウィンドウ移動
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
