@@ -36,6 +36,12 @@ set formatoptions-=ro
 "クリップボードにコピー
 set clipboard=unnamed,autoselect
 
+"bash on windows用設定
+"nnoremap <silent> <Space>y :.w !wrun win32yank.exe -i<CR><CR>
+"vnoremap <silent> <Space>y :w !wrun win32yank.exe -i<CR><CR>
+"nnoremap <silent> <Space>p :r !wrun win32yank.exe -o<CR>
+"vnoremap <silent> <Space>p :r !wrun win32yank.exe -o<CR>
+
 "文字コード変更"
 set encoding=utf-8
 
