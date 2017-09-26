@@ -42,6 +42,12 @@ set clipboard=unnamed,autoselect
 "nnoremap <silent> <Space>p :r !wrun win32yank.exe -o<CR>
 "vnoremap <silent> <Space>p :r !wrun win32yank.exe -o<CR>
 
+"mintty用
+"let &t_ti.="\e[1 q"
+"let &t_SI.="\e[5 q"
+"let &t_EI.="\e[1 q"
+"let &t_te.="\e[0 q"
+
 "文字コード変更"
 set encoding=utf-8
 
