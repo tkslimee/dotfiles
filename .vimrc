@@ -51,16 +51,14 @@ set clipboard=unnamed,autoselect
 "文字コード変更"
 set encoding=utf-8
 
-if (has("win32unix") || has("mac") || has("unix"))
 "ウィンドウ移動
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
-else
-noremap <C-l> gt
-noremap <C-h> gT
-endif
+"タブ移動
+noremap <S-l> gt
+noremap <S-h> gT
 
 nnoremap j gj
 nnoremap k gk
