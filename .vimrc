@@ -122,40 +122,42 @@ noremap <silent> [Tag]p :tabprevious<CR>
 set nocompatible " be iMproved
 filetype off
 
-if has('vim_starting')
-set runtimepath+=~/.vim/bundle/neobundle.vim
+"""
+" Dein TOML
+" プラグインが実際にインストールされるディレクトリ
+let s:dein_dir = expand('~\.cache\dein')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '\repos\github.com\Shougo\dein.vim'
+" dein.vim がなければ github から落としてくる
+if &runtimepath !~# '/dein.vim'
+    if !isdirectory(s:dein_repo_dir)
+        execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+    endif
+    "execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+    execute 'set runtimepath^=' . s:dein_repo_dir
+endif
+" 設定開始
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+  " プラグインリストを収めた TOML ファイル
+  " 予め TOML ファイル（後述）を用意しておく
+  let g:rc_dir    = expand('~/.vimfiles/rc')      "ここも .vim → vimfiles に変えた
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+  " TOML を読み込み、キャッシュしておく
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  " 設定終了
+  call dein#end()
+  call dein#save_state()
+endif
+" もし、未インストールものものがあったらインストール
+if dein#check_install()
+  call dein#install()
 endif
 
-call neobundle#begin(expand('~/.vim/bundle'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-""originalrepos on github
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'tpope/vim-obsession'
-NeoBundle 'thinca/vim-template'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-scripts/Align'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'plasticboy/vim-markdown'
-if (has("win64"))
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-endif
-call neobundle#end()
-
-NeoBundleCheck
-
-""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
-filetype plugin indent on " required!
-filetype indent on
+filetype plugin indent on
+syntax enable
 
 "" markdown設定
 " .mdのファイルもfiletypeがmarkdownとなるようにする
@@ -230,6 +232,7 @@ set t_Co=256
 syntax enable
 set background=dark
 colorscheme solarized
+"colorscheme hybrid
 
 ""unファイルを一箇所にまとめる
 set undodir=~/.vim_undo
