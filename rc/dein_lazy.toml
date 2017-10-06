@@ -50,10 +50,7 @@ hook_add = '''
 repo = 'plasticboy/vim-markdown'
 
 [[plugins]]
-repo = 'kannokanno/previm'
-
-[[plugins]]
 repo = 'tyru/open-browser.vim'
 
 [[plugins]]
-repo = 'simeji/winresizer'
+repo = 'kannokanno/previm'

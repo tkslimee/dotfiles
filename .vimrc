@@ -34,7 +34,7 @@ set autoindent
 set formatoptions-=ro
 
 " 開いているファイルのパスに自動的に移動
-set autochdir
+"set autochdir
 
 "クリップボードにコピー
 set clipboard=unnamed,autoselect
@@ -227,12 +227,14 @@ nnoremap <silent> ,gr  :<C-u>UniteResume search-buffer<CR>
 " uniteからブックマークで移動するときにvimfilerで開くようにする
 autocmd FileType vimfiler call unite#custom_default_action('directory', 'lcd')
 
+""winresizer
+nnoremap <silent> ,e :<C-u>WinResizerStartResize<CR>
+
 ""color
 set t_Co=256
 syntax enable
 set background=dark
 colorscheme solarized
-"colorscheme hybrid
 
 ""unファイルを一箇所にまとめる
 set undodir=~/.vim_undo
