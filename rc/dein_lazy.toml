@@ -1,11 +1,13 @@
 [[plugins]]
+repo = 'Shougo/neomru.vim'
+on_path = '.*'
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
 
 [[plugins]]
 repo = 'Shougo/vimfiler'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
 
 [[plugins]]
 repo = 'jpalardy/vim-slime'
@@ -31,6 +33,7 @@ repo = 'vim-scripts/Align'
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
+on_i = 1
 hook_add = '''
   let g:jedi#use_tabs_not_buffers = 1
   let g:jedi#popup_select_first = 0
