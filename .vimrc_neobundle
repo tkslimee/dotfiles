@@ -119,14 +119,14 @@ noremap <silent> [Tag]p :tabprevious<CR>
 set nocompatible " be iMproved
 filetype off
 
-if (has("win32unix") || has("mac") || has("unix"))
 if has('vim_starting')
+if (has("win32unix") || has("mac") || has("unix"))
   if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
     echo "install neobundle..."
     :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
   endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
+  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
 call neobundle#begin(expand('~/.vim/bundle'))
