@@ -33,9 +33,6 @@ set expandtab
 set autoindent
 set formatoptions-=ro
 
-" 開いているファイルのパスに自動的に移動
-"set autochdir
-
 "クリップボードにコピー
 set clipboard=unnamed,autoselect
 
