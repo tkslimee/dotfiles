@@ -72,9 +72,6 @@ noremap ; :
 
 imap <C-j> <esc>
 
-"terminal用
-set termsize=20x0
-
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
@@ -236,7 +233,7 @@ endif
 
 "ファイル指定以外でvimを開いた場合vimfilerを自動起動
 if !argc()
-    autocmd vimenter * terminal
+    autocmd vimenter * terminal ++rows=20
     autocmd vimenter * wincmd x
     autocmd vimenter * VimFilerBufferDir -split -simple -winwidth=35 -no-quit
 endif
