@@ -292,6 +292,14 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 autocmd FileType python setlocal completeopt-=preview
 
+"" terminall用設定
+nnoremap <silent> ,t :<C-u>terminal ++rows=20<CR>
+
+"" Previm用設定(windowsのみ)
+if (has("win64"))
+nnoremap <silent> ,p :<C-u>PrevimOpen<CR>
+endif
+
 ""color
 set t_Co=256
 syntax enable
