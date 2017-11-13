@@ -72,6 +72,10 @@ noremap ; :
 
 imap <C-j> <esc>
 
+"インサートモードでは自動的にIMEをオフ
+set iminsert=0
+set imsearch=-1
+
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
@@ -184,6 +188,9 @@ NeoBundle 'vim-airline/vim-airline-themes'
 "" ウィンドウサイズ変更用
 NeoBundle 'simeji/winresizer'
 
+"" ヴィジュアルモードで選択した範囲を*で検索
+NeoBundle 'nelstrom/vim-visual-star-search'
+
 "" markdownの表示用
 if (has("win64"))
 NeoBundle 'kannokanno/previm'
@@ -231,11 +238,13 @@ if (has("win64"))
 let g:vimfiler_edit_action = 'tabopen'
 endif
 
-"ファイル指定以外でvimを開いた場合vimfilerを自動起動
+"ファイル指定以外でvimを開いた場合vimfilerを自動起動(win以外)
+if (!has("win64"))
 if !argc()
     autocmd vimenter * terminal ++rows=20
     autocmd vimenter * wincmd x
     autocmd vimenter * VimFilerBufferDir -split -simple -winwidth=35 -no-quit
+endif
 endif
 
 ""unite用設定
