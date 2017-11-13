@@ -241,8 +241,6 @@ endif
 "ファイル指定以外でvimを開いた場合vimfilerを自動起動(win以外)
 if (!has("win64"))
 if !argc()
-    autocmd vimenter * terminal ++rows=20
-    autocmd vimenter * wincmd x
     autocmd vimenter * VimFilerBufferDir -split -simple -winwidth=35 -no-quit
 endif
 endif
