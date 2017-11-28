@@ -64,6 +64,9 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
+"大きく移動
+nnoremap J 10j
+nnoremap K 10k
 
 noremap <cr> o<esc>
 
